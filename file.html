@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
         <title> Portefolio</title>
+
         <style>
+            *{
+                margin: 0;
+                box-sizing: border-box;
+                height: 50vh;
+            }
             nav{
                 margin: 27px auto 0;
                 position: relative;
-                width: 590px;
+                width: 600px;
                 height: 50px;
                 background-color: #34495e;
                 border-radius: 8px;
@@ -18,7 +29,7 @@
                 font-size: 15px;
                 display: inline-block;
                 position: relative;
-                z-index: 1;
+                z-index: 1; 
                 text-decoration: none;
                 text-transform: uppercase;
                 text-align: center;
@@ -48,6 +59,7 @@
             a:nth-child(5){
                 width: 120px;
             }
+            /*
             nav .start-home,a:nth-child(1):hover~.animation{
                 width: 100px;
                 left: 0;
@@ -72,7 +84,7 @@
                 width: 12px;
                 left: 470px;
                 background-color: #e67e22;
-            }
+            }*/
             body{
                 font-size: 12px;
                 font-family: sans-serif;
@@ -84,6 +96,70 @@
             #home{
                 margin: 5px 5px;
             }
+            
+            .pic{
+                margin: 10px;
+                padding: 5px;
+                width: 300px;
+                cursor: pointer;
+                border-radius: 15%;
+                border-width: 3px;
+                position: absolute;
+                bottom: 25px;
+                right: 140px;
+                animation-name: rotate;
+            }
+            .pic:active{
+                transform: rotate(20deg);
+            }
+
+            /*@keyframes rotate{
+                0% {
+                        transform: rotate(5deg);
+                }
+                50%{
+                    transform: rotate(15deg);
+                }
+                100%{
+                    transform: rotate(30deg);
+                }
+            }*/
+
+            /* removed Angelo
+            h3{
+                position: absolute;
+                bottom: 90px;
+                left: 50px;
+                font-size: 35px;
+                color: white;
+            }
+            */
+            p{
+                position: absolute;
+                bottom: 40px;
+                left: 60px;
+                font-size: 18px;
+                color: white;
+            }
+            h1{
+                position: absolute;
+                bottom: 10px;
+                left: 60px;
+                color: white;
+                font-size: 40px;
+            }
+            .bout-me{
+                position: absolute;
+                bottom: -60px;
+                left: 20px;
+            }
+
+            .about{
+                background-image: url("compute.jpeg");
+                background-repeat: repeat;
+                background-size: 50px 70px;
+                background-position: center;
+            }
 
         </style>
     </head>
@@ -91,19 +167,38 @@
     <body>
         <div>
             <nav>
-                <a href="home">Home</a>
-                <a href="#">About</a>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
                 <a href="#">Blog</a>
                 <a href="#">Portefolio</a>
                 <a href="#">Contact</a>
                 <div class="animation start-home"></div>
             </nav>
         </div>
+
+        <div id="my-pic">
+        <img src="my-p.JPG" class="pic" draggable="false">
+    </div>
+
         <div id="home">
-            <h3>Angelo...</h3>
+            <!--<h3><b>Angelo</b></h3>-->
             <p>FRONT-END DESIGNER</p>
             <h1>Hello, I'm Angelo Emmanuel</h1>
-            <img src="my-p.JPG">
+            <p class="bout-me">As a versatile developer with a passion for both mobile and web technologies,<br>
+                I specialize in creating websites applications.<br>
+                My expertise lies in using HTML for creation of content and CSS for change in apperance.<br>
+                I'm constantly striving to enhance my coding skills and develop innovative solutions.<br>
+                  </p>
+            
+        </div>
+
+        <div id="about" class="about">
+            <!--<h1> About Me..</h1>
+            <p class="about-text">I'm 20 years old and from Accra, Ghana. i've always been eager to learn and know more 
+                about how website are being built and computer as a whole. I'm currently attending the <br>
+                University of Education, Winneba. Where i major ICT (Information Communication Technology) as a Software 
+                developer. My aim is to improve in my every-day learning and increase in knowledge about computer.
+            </p>-->
         </div>
     </body>
 </html>
